@@ -25,7 +25,7 @@ When you run this app, you will be prompted to input an employee's name, role, I
 
 ![CLI Example](assets/screenshots/cli-example.png?raw=true "CLI Example")
 
-When you are finished adding employees, a page named team.html will automatically be generated in the /output directory.
+When you are finished adding employees, a page named 'team.html' will automatically be generated in the '/output' directory.
 
 ![HTML Output](assets/screenshots/html-output.png?raw=true "HTML Output")
 
