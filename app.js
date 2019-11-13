@@ -13,17 +13,7 @@ const Engineer = require("./lib/constructors/Engineer");
 const Intern = require("./lib/constructors/Intern");
 
 // Global Variables
-const teamMembers = [
-  // new Manager("Brent", 1, "brent@trilogyed.com", 200),
-  // new Engineer("Tucker", 2, "tbeauchamp@2u.com", "tuckerbeauchamp"),
-  // new Intern("Becky", 3, "becky@becky.com", "UofA"),
-  // new Intern("Shelly", 4, "shelly@shelly.com", "UofA")
-];
-/***
- * THIS PROJECT IS NOT COMPLETE.
- * YOU WILL NEED TO BUILD YOUR HTML LAYOUTS
- * PROMPT THE USER FOR ALL OF THEIR DIFFERENT TEAM MEMBERS
- */
+const teamMembers = [];
 
 async function buildTeamMembersArray() {
   let addAnother = true;
@@ -37,9 +27,9 @@ async function buildTeamMembersArray() {
         answers.officeNumber = officeNumber;
         teamMembers.push(new Manager(
           answers.name,
-          answers.id,
+          Number(answers.id),
           answers.email,
-          answers.officeNumber
+          Number(answers.officeNumber)
         ));
         break;
       case 'Engineer':
@@ -47,7 +37,7 @@ async function buildTeamMembersArray() {
         answers.github = github;
         teamMembers.push(new Engineer(
           answers.name,
-          answers.id,
+          Number(answers.id),
           answers.email,
           answers.github
         ));
@@ -57,7 +47,7 @@ async function buildTeamMembersArray() {
         answers.school = school;
         teamMembers.push(new Intern(
           answers.name,
-          answers.id,
+          Number(answers.id),
           answers.email,
           answers.school
         ));
@@ -74,6 +64,7 @@ async function buildTeamMembersArray() {
 
     addAnother = confirm.addAnother;
   }
+
   init();
 }
 
